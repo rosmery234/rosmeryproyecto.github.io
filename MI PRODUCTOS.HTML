@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Hamburguesas</title>
+    <nav class="menu">
+        <img src="redes/fire-7082466_1280 LOGO.PGN.webp" width="90" height="90" alt="">
+        <ul class="navbar">
+            <li><a href="INDEX.HTML">INICIO</a></li>
+            <li><a href="QUIENES SOMOS.HTML">QUIENES SOMOS</a></li>
+            <li><a href="MI PRODUCTOS.HTML">PRODUCTOS</a></li>
+            <li><a href="GALERIA.HTML">GALERIA</a></li>
+            <li><a href="CUESTIONARIO.HTML">CUESTIONARIO</a></li>
+            <li><a href="FORMULARIO.HTML">FORMULARIO</a></li>
+            <li><a href="CONTACTOS.HTML">CONTACTOS</a></li>
+        </ul>
+    </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3f3f3f;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .navbar {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .navbar li {
+            margin: 0 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .load-more {
+            text-align: center;
+            margin: 20px;
+        }
+        .load-more button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff5722;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PRODUCTOS DE HAMBURGUESAS</h1>
+        <p>¡Las mejores hamburguesas de la ciudad!</p>
+    </header>
+    <div class="menu" id="menu">
+        <div class="product">
+            <img src="IMG/hamburguesa12.jpeg" alt="Hamburguesa Clásica">
+            <h2>Hamburguesa Clásica</h2>
+            <p>Carne jugosa, lechuga fresca, tomate y cebolla.</p>
+            <p><strong>Precio: $10</strong></p>
+        </div>
+        <div class="product">
+            <img src="IMG/HAMBURGUESA-7.png" alt="Hamburguesa BBQ">
+            <h2>Hamburguesa BBQ</h2>
+            <p>Carne a la parrilla, salsa BBQ, queso cheddar y cebolla caramelizada.</p>
+            <p><strong>Precio: $12</strong></p>
+        </div>
+        <div class="product">
+            <img src="IMG/hamburguesa22.jpeg" alt="Hamburguesa Vegetariana">
+            <h2>Hamburguesa Vegetariana</h2>
+            <p>Hamburguesa de garbanzos, aguacate y salsa de yogur.</p>
+            <p><strong>Precio: $9</strong></p>
+        </div>
+    </div>
+
+    <div class="load-more">
+        <button onclick="loadMoreProducts()">Ver más</button>
+    </div>
+    <section><iframe class="maps"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122403.52747849158!2d-68.20648003658584!3d-16.520531610687215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz!5e0!3m2!1ses-419!2sbo!4v1732168832880!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
+    <footer>
+        <p>¡Visítanos y disfruta de nuestras hamburguesas!</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">
+                <img src="redes/fffff.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="redes/iiiiii.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="redes/tttttt.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="redes/llllll.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function loadMoreProducts() {
+            const menu = document.getElementById('menu');
+            const newProducts = `
+                <div class="product">
+                    <img src="IMG/hamburguesa22.jpeg" alt="Hamburguesa Picante">
+                    <h2>Hamburguesa Picante</h2>
+                    <p>Carne picante, jalapeños, queso pepper jack y salsa especial.</p>
+                    <p><strong>Precio: $11</strong></p>
+                </div>
+                <div class="product">
+                    <img src="IMG/hamburguesa22.jpeg" alt="Hamburguesa con Queso">
+                    <h2>Hamburguesa con Queso</h2>
+                    <p>Carne jugosa, doble queso cheddar y cebolla crujiente.</p>
+                    <p><strong>Precio: $13</strong></p>
+                </div>
+                <div class="product">
+                    <img src="IMG/hamburguesa22.jpeg" alt="Hamburguesa Deluxe">
+                    <h2>Hamburguesa Deluxe</h2>
+                    <p>Carne premium, aguacate, bacon y salsa de mostaza miel.</p>
+                    <p><strong>Precio: $15</strong></p>
+                </div>
+            `;
+            menu.insertAdjacentHTML('beforeend', newProducts);
+        }
+    </script>
+</body>
+</html>
